@@ -1,3 +1,5 @@
- .menu-menu-1-container {
-    @extend .list-inline;
+ .banner {
+    .nav {
+        @extend .list-inline;
+     }
  }
