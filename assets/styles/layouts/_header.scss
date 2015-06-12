@@ -1,26 +1,7 @@
-/* ---------------------------------------- */ 
-/* Variables */ 
-/* ---------------------------------------- */
-$color-bg: #eee;
-$color-brand: #1abc9c;
-$color-font-header: #fff;
-$color-font: #000;
-$menu-trigger__height: 30px;
-$menu-trigger__width: 40px;
-$menu-trigger__line__height: 5px;
-$small: "only screen and (min-width: 650px)";
-
-body {
-    background-color: #eee;
-    font-family: helvetica, arial, sans-serif;
-    font-size: 16px;
-    padding-top: 330px;
-    transition: padding-top .5s ease;
-}
 header {
     width: 100%;
     height: 300px;
-    background-color: $color-brand;
+    background-color: $color-bg;
     text-align: center;
     position: relative;
     position: fixed;
@@ -29,140 +10,143 @@ header {
     color: $color-font-header;
     transition: all .5s ease;
     z-index: 99999;
-    
+
     .brand {
         font-size: 42px;
-        line-height: 230px;
         text-transform: uppercase;
         font-weight: 100;
+        position:relative;
+        display: inline-block;
+        top: 70px;
+        width: 207px;
+        height: 80px; 
+        background: url(../../assets/images/HelenaCesar.png) no-repeat left top;
         transition: all .3s ease;
+        text-indent : -9999px;
     }
     .nav {
         position: absolute;
         bottom: 0;
         width: 100%;
-    
-    .brand-small {
-      font-size: 20px;
-      display: inline-block;
-    }
-    @media #{$small} {
-      .menu-trigger,
-      .brand-small {
-        display: none;
-      }
-    }
-
-    ul {
-        padding: 0;
-        margin: 0;
+        .brand-small {
+            font-size: 20px;
+            display: inline-block;
+        }
+        @media #{$small} {
+        
+            .menu-trigger, 
+            .brand-small {
+                display: none;
+            }
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+        }
     }
 }
 .main-menu {
-  position: relative;
-  display: none;
-  
-  @media #{$small} {
-    display: block;
-  }
-  > li {
-      display: inline-block;
-      position: relative;
+    position: relative;
+    display: none;
+     @media #{$small} {
+        display: block;
+    }
+    > li {
+        display: inline-block;
+        position: relative;
     }
     a {
         display: inline-block;
         padding: 10px 15px;
         line-height: 1;
         text-decoration: none;
+        font-family: $font-title;
+        color: $color-gray;
+        text-transform: uppercase;
+        font-size: 16px;
     }
-} 
-
+}
 .sub-menu {
-        position: absolute;
-        width: 100%;
-        white-space: nowrap;
+    position: absolute;
+    white-space: nowrap;
+    background: $color-bg;
+    text-align: left;
 
-        li {
-            display: block;
-        }
+    li {
+        display: block;
     }
 }
 
-/* ---------------------------------------- */ 
-/* Sticky Header Style */   
-/* ---------------------------------------- */ 
-.is-sticky {
-    padding-top: 100px;
+    /* ---------------------------------------- */
+    /* Sticky Header Style */
+    /* ---------------------------------------- */
     
-  header {
-        height: 60px;
-        background-color: rgba($color-brand,.9);
-        .brand {
-            display: none;
+    .is-sticky {
+        padding-top: 100px;
+        header {
+            height: 60px;
+            background-color: rgba($color-bg, .9);
+            .brand {
+                display: none;
+            }
         }
     }
-}
-
-/* ---------------------------------------- */ 
-/* Menu Trigger  */ 
-/* ---------------------------------------- */ 
-
-// Structure
-
-.menu-trigger {
-  display: block;
-  position: absolute;
-  width: $menu-trigger__width;
-  height: $menu-trigger__height;
-  padding: 10px 15px;
-  z-index: 2;
-}
-.menu-trigger__lines { 
-  display: block;
-  width: $menu-trigger__width;
-  height: $menu-trigger__line__height; 
-  margin-top: 0;
-  background: $color-font-header;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  margin-left: -15px;
-  
-  &::before, &::after { 
-    display: block; 
-    position: absolute; 
-    content: "";
-    z-index: -1;
-    width: $menu-trigger__width; 
-    height: $menu-trigger__line__height; 
-    background: $color-font-header;
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out; 
-  }
-  &::before {
-    top: 0;
-  }
-  &::after {
-    top: $menu-trigger__line__height * 4;
-  }
-}
-
-// Clicked State
-.is-open {
-  .menu-trigger__lines {
-    background: none;
-
-    &::before, &::after {
-      top: $menu-trigger__line__height * 2; 
+    /* ---------------------------------------- */
+    /* Menu Trigger  */
+    /* ---------------------------------------- */
+    
+    // Structure
+    .menu-trigger {
+        display: block;
+        position: absolute;
+        width: $menu-trigger__width;
+        height: $menu-trigger__height;
+        padding: 10px 15px;
+        z-index: 2;
     }
-    &::before {
-      -webkit-transform: rotate(-45deg); 
-      -ms-transform: rotate(-45deg); 
-      transform: rotate(-45deg);
+    .menu-trigger__lines {
+        display: block;
+        width: $menu-trigger__width;
+        height: $menu-trigger__line__height;
+        margin-top: 0;
+        background: $color-font-header;
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+        margin-left: -15px;
+        &::before, &::after {
+            display: block;
+            position: absolute;
+            content: "";
+            z-index: -1;
+            width: $menu-trigger__width;
+            height: $menu-trigger__line__height;
+            background: $color-font-header;
+            -webkit-transition: all 0.4s ease-in-out;
+            transition: all 0.4s ease-in-out;
+        }
+        &::before {
+            top: 0;
+        }
+        &::after {
+            top: $menu-trigger__line__height * 4;
+        }
     }
-    &::after {
-      -webkit-transform: rotate(45deg); 
-      -ms-transform: rotate(45deg); 
-      transform: rotate(45deg);
+    // Clicked State
+    .is-open {
+        .menu-trigger__lines {
+            background: none;
+            &::before, &::after {
+                top: $menu-trigger__line__height * 2;
+            }
+            &::before {
+                -webkit-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+            &::after {
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+        }
     }
-  } 
-}
