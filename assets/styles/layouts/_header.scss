@@ -1,20 +1,167 @@
- .banner {
+/* ---------------------------------------- */ 
+/* Variables */ 
+/* ---------------------------------------- */
+$color-bg: #eee;
+$color-brand: #1abc9c;
+$color-font-header: #fff;
+$color-font: #000;
+$menu-trigger__height: 30px;
+$menu-trigger__width: 40px;
+$menu-trigger__line__height: 5px;
+$small: "only screen and (min-width: 650px)";
+
+body {
+    background-color: #eee;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 16px;
+    padding-top: 330px;
+    transition: padding-top .5s ease;
+}
+header {
+    width: 100%;
+    height: 300px;
+    background-color: $color-brand;
     text-align: center;
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    color: $color-font-header;
+    transition: all .5s ease;
+    z-index: 99999;
+    
+    .brand {
+        font-size: 42px;
+        line-height: 230px;
+        text-transform: uppercase;
+        font-weight: 100;
+        transition: all .3s ease;
+    }
     .nav {
-        @extend .list-inline;
-     }
- }
-.brand {
-    display: inline-block;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    
+    .brand-small {
+      font-size: 20px;
+      display: inline-block;
+    }
+    @media #{$small} {
+      .menu-trigger,
+      .brand-small {
+        display: none;
+      }
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+}
+.main-menu {
+  position: relative;
+  display: none;
+  
+  @media #{$small} {
+    display: block;
+  }
+  > li {
+      display: inline-block;
+      position: relative;
+    }
+    a {
+        display: inline-block;
+        padding: 10px 15px;
+        line-height: 1;
+        text-decoration: none;
+    }
+} 
+
+.sub-menu {
+        position: absolute;
+        width: 100%;
+
+        li {
+            display: block;
+        }
+    }
 }
 
-.material-menu-button {display:none;}
+/* ---------------------------------------- */ 
+/* Sticky Header Style */   
+/* ---------------------------------------- */ 
+.is-sticky {
+    padding-top: 100px;
+    
+  header {
+        height: 60px;
+        background-color: rgba($color-brand,.9);
+        .brand {
+            transform: scale(0, 0);
+        }
+    }
+}
 
-@media only screen and (max-width: 767px) {
-  .material-menu-button {position:absolute;top:20px;right:20px;z-index:10;display:block;width:50px;height:45px;padding:10px 10px 0px 10px;background-color:#000;}
-  .material-menu-button span {display:block;width:100%;height:5px;margin-bottom:4px;background-color:#fff;}
-  .material-menu-wrapper {padding:20px;}
-  .material-menu-view-mobile {background-color:#fff;-webkit-box-shadow:40px 0px 30px 0px rgba(0, 0, 0, 0.2);-moz-box-shadow:40px 0px 30px 0px rgba(0, 0, 0, 0.2);box-shadow:40px 0px 30px 0px rgba(0, 0, 0, 0.2);}
-  .material-menu-titlebar {-webkit-box-shadow:0px 2px 3px 0px rgba(0, 0, 0, 0.2);-moz-box-shadow:0px 2px 3px 0px rgba(0, 0, 0, 0.2);box-shadow:0px 2px 3px 0px rgba(0, 0, 0, 0.2);}
-  .material-menu-titlebar .material-menu-button {position:static;}
+/* ---------------------------------------- */ 
+/* Menu Trigger  */ 
+/* ---------------------------------------- */ 
+
+// Structure
+
+.menu-trigger {
+  display: block;
+  position: absolute;
+  width: $menu-trigger__width;
+  height: $menu-trigger__height;
+  padding: 10px 15px;
+  z-index: 2;
+}
+.menu-trigger__lines { 
+  display: block;
+  width: $menu-trigger__width;
+  height: $menu-trigger__line__height; 
+  margin-top: 0;
+  background: $color-font-header;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  
+  &::before, &::after { 
+    display: block; 
+    position: absolute; 
+    content: "";
+    z-index: -1;
+    width: $menu-trigger__width; 
+    height: $menu-trigger__line__height; 
+    background: $color-font-header;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; 
+  }
+  &::before {
+    top: 0;
+  }
+  &::after {
+    top: $menu-trigger__line__height * 4;
+  }
+}
+
+// Clicked State
+.is-open {
+  .menu-trigger__lines {
+    background: none;
+
+    &::before, &::after {
+      top: $menu-trigger__line__height * 2; 
+    }
+    &::before {
+      -webkit-transform: rotate(-45deg); 
+      -ms-transform: rotate(-45deg); 
+      transform: rotate(-45deg);
+    }
+    &::after {
+      -webkit-transform: rotate(45deg); 
+      -ms-transform: rotate(45deg); 
+      transform: rotate(45deg);
+    }
+  } 
 }

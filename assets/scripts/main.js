@@ -19,8 +19,20 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
-
-        $('.material-menu nav > ul').materialmenu();
+        console.log('ok');
+        
+        $(window).scroll(function(){
+          var winTop = $(window).scrollTop();
+          if(winTop >= 30){
+            $("body").addClass("is-sticky");
+          }else{
+            $("body").removeClass("is-sticky");
+          }//if-else
+        });//win func.
+        
+        $(".menu-trigger").click(function() {
+          $(this).toggleClass("is-open");
+        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
