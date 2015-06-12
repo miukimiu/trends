@@ -33,6 +33,11 @@
         $(".menu-trigger").click(function() {
           $(this).toggleClass("is-open");
         });
+
+        $(".menu-item-has-children").click(function() {
+          $(this).find(".sub-menu").toggleClass("is-active");
+        });
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

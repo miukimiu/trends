@@ -71,6 +71,12 @@ header {
     white-space: nowrap;
     background: $color-bg;
     text-align: left;
+    display: none;
+
+    &.is-active {
+        display: block;
+    }
+
 
     li {
         display: block;
