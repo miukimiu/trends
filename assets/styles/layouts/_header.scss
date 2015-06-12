@@ -26,7 +26,6 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    overflow: hidden;
     color: $color-font-header;
     transition: all .5s ease;
     z-index: 99999;
@@ -81,6 +80,7 @@ header {
 .sub-menu {
         position: absolute;
         width: 100%;
+        white-space: nowrap;
 
         li {
             display: block;
@@ -98,7 +98,7 @@ header {
         height: 60px;
         background-color: rgba($color-brand,.9);
         .brand {
-            transform: scale(0, 0);
+            display: none;
         }
     }
 }
@@ -125,6 +125,7 @@ header {
   background: $color-font-header;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+  margin-left: -15px;
   
   &::before, &::after { 
     display: block; 
