@@ -27,6 +27,9 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
+  add_image_size( 'single', 750, 9999);
+  add_image_size( 'featured', 750, 420, true );
+  add_image_size( 'featured-small', 360, 200, true );
 
   // Add post formats
   // http://codex.wordpress.org/Post_Formats

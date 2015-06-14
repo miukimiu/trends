@@ -53,7 +53,8 @@ function display_sidebar() {
        */
       [
         'is_404',
-        ['is_page_template', 'template-custom.php']
+        ['is_page_template', 'template-custom.php'],
+        ['is_post_type_archive', 'portfolio']
       ]
     );
 

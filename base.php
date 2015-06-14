@@ -19,7 +19,7 @@ use Roots\Sage\Wrapper;
       get_template_part('templates/header');
     ?>
     <div class="wrap container" role="document">
-      <div class="content row">
+      <div class="content">
 
         <?php
         if ( is_home() ) {

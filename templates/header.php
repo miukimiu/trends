@@ -3,7 +3,7 @@
 
     <nav role="navigation" class="nav">
       <a class="menu-trigger">
-        <div class="menu-trigger__lines"></div>
+        <span class="glyphicon glyphicon-menu-hamburger"></span>
       </a>
       <a href="" class="brand-small">logo</a>
       <?php
