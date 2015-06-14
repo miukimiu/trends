@@ -35,6 +35,7 @@
         });
 
         $(".menu-item-has-children").click(function() {
+          $(this).toggleClass("is-open");
           $(this).find(".sub-menu").toggleClass("is-active");
         });
 
