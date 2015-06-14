@@ -28,8 +28,8 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
   add_image_size( 'single', 750, 9999);
-  add_image_size( 'featured', 750, 420, true );
-  add_image_size( 'featured-small', 360, 200, true );
+  add_image_size( 'featured', 750, 430, true );
+  add_image_size( 'featured-small', 360, 207, true );
 
   // Add post formats
   // http://codex.wordpress.org/Post_Formats
