@@ -1,24 +1,31 @@
-<header class="banner" role="banner">
-    <a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
-
-    <nav role="navigation" class="nav">
-      <a class="menu-trigger">
-        <div class="menu-trigger__lines"></div>
-      </a>
-      <a href="" class="brand-small">logo</a>
-      <?php
-      if (has_nav_menu('primary_navigation')) :
-        wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'main-menu']);
-      endif;
-      ?>
-    </nav>
-</header>
-
 <section>
 
 <div class="container">
   <div class="row">
-          <div class="col-md-6">ok</div>
+          <div class="col-md-6">
+            <?php
+              $counter = 1;
+              $max = 1;
+              // The Loop
+              while ( have_posts() ) : the_post();  
+
+              //queremos apenas um artigo de destaque. Logo limitamos o loop para apenas o último artigo.
+              if ($counter == $max) {
+
+                ?>
+                
+              ****************  Aqui fica o destaque **************
+               
+              <?php   
+              }
+
+              $counter++;
+              endwhile;
+
+              // Reset Query
+              wp_reset_query();
+            ?>   
+          </div>
            <div class="col-md-6">
               <div>A</div>
               <div>B</div>

@@ -1,4 +1,4 @@
-header {
+.main-header {
     width: 100%;
     height: 300px;
     background-color: $color-bg;
@@ -112,7 +112,7 @@ header {
     
     .is-sticky {
         padding-top: 100px;
-        header {
+        .main-header {
             height: 60px;
             background-color: rgba($color-bg, .9);
             .brand {
@@ -133,33 +133,7 @@ header {
         padding: 10px 15px;
         z-index: 2;
     }
-    .menu-trigger__lines {
-        display: block;
-        width: $menu-trigger__width;
-        height: $menu-trigger__line__height;
-        margin-top: 0;
-        background: $color-font-header;
-        -webkit-transition: all 0.4s ease-in-out;
-        transition: all 0.4s ease-in-out;
-        margin-left: -15px;
-        &::before, &::after {
-            display: block;
-            position: absolute;
-            content: "";
-            z-index: -1;
-            width: $menu-trigger__width;
-            height: $menu-trigger__line__height;
-            background: $color-font-header;
-            -webkit-transition: all 0.4s ease-in-out;
-            transition: all 0.4s ease-in-out;
-        }
-        &::before {
-            top: 0;
-        }
-        &::after {
-            top: $menu-trigger__line__height * 4;
-        }
-    }
+
     // Clicked State
     .is-open {
         .menu-trigger__lines {
