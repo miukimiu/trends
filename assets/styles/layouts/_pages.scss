@@ -4,15 +4,4 @@
 .featured__item {
     padding-bottom: $gutter;
 }
-.instagram-pics {
-    @include make-row();
 
-    li {
-        @include make-sm-column(2);
-        margin-bottom: $gutter;
-        
-        img {
-            @extend .img-thumbnail;
-        }
-    }
-}

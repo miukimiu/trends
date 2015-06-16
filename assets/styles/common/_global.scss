@@ -1,6 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display|Open+Sans:400,300);
 
-
 .container {
     position: relative;
 }
@@ -22,7 +21,8 @@ body {
             text-decoration: none;
         }
     }
-    img {
+    // images
+    .size-medium {
         width: 100%;
         height: auto;
     }
@@ -53,4 +53,11 @@ p {
     border-radius: 0;
     -webkit-transition: all .25s ease-in-out;
           transition: all .25s ease-in-out;
+}
+.avatar {
+    width: auto;
+}
+.avatar-32 {
+    width: 32px;
+    height: 32px;
 }
