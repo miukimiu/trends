@@ -33,5 +33,3 @@ endwhile;
 ?>
 
 <?php the_posts_navigation(); ?>
-
-<?php get_template_part('templates/page', 'instagram'); ?>
