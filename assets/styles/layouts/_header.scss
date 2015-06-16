@@ -11,6 +11,9 @@
     transition: all .5s ease;
     z-index: 99999;
 
+    .admin-bar & {
+        top: 32px;
+    }
     .brand {
         font-size: 42px;
         text-transform: uppercase;
@@ -48,6 +51,8 @@
 .main-menu {
     position: relative;
     display: none;
+    top: -10px;
+
      @media #{$small} {
         display: block;
     }
@@ -56,8 +61,8 @@
         position: relative;
     }
     a {
-        display: inline-block;
-        padding: 10px 15px;
+        display: block;
+        padding: 12px 15px;
         line-height: 1;
         text-decoration: none;
         font-family: $font-title;
@@ -65,9 +70,17 @@
         text-transform: uppercase;
         font-size: 16px;
 
+        @media #{$small} {
+            display: inline-block;
+        }
+
         &:hover {
             color: darken($color-gray, 10%);
         }
+    }
+    .current-menu-ancestor > a,
+    .current-menu-item > a {
+        color: $color-primary;
     }
     .menu-item-has-children {
         > a {
@@ -78,33 +91,33 @@
 
             &:before {
                 position: absolute;
-                top: 13px;
+                top: 16px;
                 right: 4px;
-                font-size: 12px;
+                font-size: 10px;
             }
         }
         &.is-open > a {
             @extend .glyphicon-menu-up;
         }
     }
-}
+    .sub-menu {
+        position: absolute;
+        top: 51px;
+        white-space: nowrap;
+        background: $color-bg;
+        text-align: left;
+        display: none;
 
-.sub-menu {
-    position: absolute;
-    white-space: nowrap;
-    background: $color-bg;
-    text-align: left;
-    display: none;
+        &.is-active {
+            display: block;
+        }
 
-    &.is-active {
-        display: block;
+
+        li {
+            display: block;
+        }
     }
-
-
-    li {
-        display: block;
-    }
-}
+}// main header
 
     /* ---------------------------------------- */
     /* Sticky Header Style */
@@ -112,9 +125,11 @@
     
     .is-sticky {
         padding-top: 100px;
+
         .main-header {
             height: 60px;
-            background-color: rgba($color-bg, .9);
+            box-shadow: 0 0 3px 0 rgba($color-black, 0.22);
+
             .brand {
                 display: none;
             }

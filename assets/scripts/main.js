@@ -30,13 +30,19 @@
           }//if-else
         });//win func.
         
-        $(".menu-trigger").click(function() {
+        $(".menu-trigger").click(function(event) {
+          
+          event.preventDefault();
+          
           $(this).toggleClass("is-open");
         });
 
-        $(".menu-item-has-children").click(function() {
-          $(this).toggleClass("is-open");
-          $(this).find(".sub-menu").toggleClass("is-active");
+        $(".menu-item-has-children > a").click(function(event) {
+          
+          event.preventDefault();
+
+          $(this).parent().toggleClass("is-open");
+          $(this).parent().find(".sub-menu").toggleClass("is-active");
         });
 
       },

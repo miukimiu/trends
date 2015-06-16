@@ -6,8 +6,8 @@
 $counter = 1;
 
 // The Loop
-while ( have_posts() ) : the_post();                        
-            
+while ( have_posts() ) : the_post();
+
 //começa a contar a partir do primeiro artigo pois o primeiro já foi impresso em cima. 
 if($counter>2 || $paged>1)
 {
