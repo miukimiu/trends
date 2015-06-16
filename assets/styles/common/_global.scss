@@ -43,3 +43,14 @@ h3 {
 p {
     color: $color-text;
 }
+.img-thumbnail {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    padding: 6px;
+    line-height: 1.72222;
+    background-color: #fff;
+    border-radius: 0;
+    -webkit-transition: all .25s ease-in-out;
+          transition: all .25s ease-in-out;
+}
