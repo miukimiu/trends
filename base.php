@@ -23,7 +23,7 @@ use Roots\Sage\Wrapper;
 
         <?php
         if ( is_home() ) {
-            get_template_part('templates/header-home');
+            get_template_part('templates/featured');
           } 
         ?>
 

@@ -1,6 +1,4 @@
 
-<?php get_template_part('templates/page', 'header'); ?>
-
 <?php
 
 $counter = 1;
