@@ -1,5 +1,5 @@
 <section class="featured">
-    <div class="col-sm-8">
+    <div class="featured__item">
       <?php
         $counter = 1;
         $max = 1;
@@ -11,9 +11,9 @@
 
           ?>
         
-        <div class="featured__item">
+       
           <?php the_post_thumbnail('featured'); ?>
-        </div> 
+    
         <?php   
         }
 
@@ -24,7 +24,7 @@
         wp_reset_query();
       ?>   
     </div>
-     <div class="col-sm-4">
+
          <?php
           if ( get_query_var('paged') ) $paged = get_query_var('paged');  
           if ( get_query_var('page') ) $paged = get_query_var('page');
@@ -34,7 +34,7 @@
           if ( $query->have_posts() ) : ?>
             <?php while ( $query->have_posts() ) : $query->the_post(); ?> 
 
-              <div class="featured-portfolio">
+              <div class="featured__item--small">
                 <?php the_post_thumbnail('featured-small'); ?>
               </div>
             
@@ -53,7 +53,7 @@
           if ( $query->have_posts() ) : ?>
             <?php while ( $query->have_posts() ) : $query->the_post(); ?> 
 
-              <div class="featured-portfolio">
+              <div class="featured__item--small">
                 <?php the_post_thumbnail('featured-small'); ?>
               </div>
             
@@ -62,6 +62,6 @@
           <?php else : ?>
             <!-- show 404 error here -->
           <?php endif; ?>
-     </div>
+    
 </section>
         

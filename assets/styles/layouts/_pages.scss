@@ -1,11 +1,37 @@
 /* ---------------------------------------- */ 
 /* Home */ 
 /* ---------------------------------------- */
-.featured__item {
-    padding-bottom: $gutter;
-
+.featured {
     img {
         @extend .img-responsive;
     }
-}
 
+    > div {
+        padding-bottom: $gutter;
+
+        @media #{$small} {
+            padding-bottom: 0;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+}
+.featured__item {
+    padding-bottom: $gutter;
+    float: left;
+    width: 100%;
+
+    @media #{$small} {
+        width: 60%;
+    }
+}
+.featured__item--small {
+    float: right;
+    width: 100%;
+
+    @media #{$small} {
+        width: 40%;
+    }
+}
