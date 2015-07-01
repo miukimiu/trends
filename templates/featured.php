@@ -1,5 +1,5 @@
 <section class="featured">
-    <div class="featured__item">
+    <div class="featured__item col-sm-7">
       <?php
         $counter = 1;
         $max = 1;
@@ -42,7 +42,7 @@
           if ( $query->have_posts() ) : ?>
             <?php while ( $query->have_posts() ) : $query->the_post(); ?> 
 
-              <div class="featured__item--small">
+              <div class="featured__item--video col-sm-5">
                 <?php the_post_thumbnail('featured-small'); ?>
 
                 <article>
@@ -68,7 +68,7 @@
           if ( $query->have_posts() ) : ?>
             <?php while ( $query->have_posts() ) : $query->the_post(); ?> 
 
-              <div class="featured__item--small">
+              <div class="featured__item--portfolio col-sm-5">
                 <?php the_post_thumbnail('featured-small'); ?>
                 <article>
                   <header>
