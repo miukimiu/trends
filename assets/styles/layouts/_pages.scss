@@ -20,15 +20,22 @@
         height: 100%;
         bottom: 0;
         left: 0;
-        padding: $gutter-md;
+        padding: $gutter-md + $gutter-md;
 
         header {
             padding: $gutter-md;
             background: rgba($color-white, 0.8);
+            border: 1px solid $color-black;
         }
         h2 {
             margin: 0;
             padding: 0;
+            color: $color-black;
+            font-size: 25px;
+
+            a {
+                color: $color-black;
+            }
         }
     }
     .col-sm-5 {
@@ -38,7 +45,6 @@
     }
 }
 .featured__item {
-    padding-bottom: $gutter;
 
     @media #{$small} {
        padding-right: 1.3513513515%;

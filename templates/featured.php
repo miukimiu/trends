@@ -17,7 +17,8 @@
           <article>
             <header>
               <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-              <?php get_template_part('templates/entry-meta'); ?>
+              <?php get_template_part('templates/entry-time'); ?>
+              <a href="<?php the_permalink(); ?>" class="btn-small">Read more</a>
             </header>
           </article>
 
@@ -45,12 +46,9 @@
               <div class="featured__item--video col-sm-5">
                 <?php the_post_thumbnail('featured-small'); ?>
 
-                <article>
-                  <header>
+                  <div></div>
                     <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                     <?php get_template_part('templates/entry-meta'); ?>
-                  </header>
-                </article>
               </div>
             
             <?php endwhile; wp_reset_postdata(); ?>
