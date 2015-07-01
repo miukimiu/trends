@@ -45,6 +45,15 @@
           $(this).parent().find(".sub-menu").toggleClass("is-active");
         });
 
+        var navLeft = $('.left-menu');
+        var showLeft = $('.menu-trigger');
+        
+        $(showLeft).click(function(){
+            $(navLeft).toggleClass("open-left");
+            $(document.body).toggleClass("push-right");
+                return false;
+        });
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

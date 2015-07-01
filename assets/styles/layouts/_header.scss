@@ -1,3 +1,7 @@
+
+// variables
+$mobile-menu-width: 300px;
+
 .desktop-header {
     width: 100%;
     height: 300px;
@@ -160,17 +164,18 @@
     position: fixed;
     width: 100%;
     top: 0;
-    background: $color-white;
-    box-shadow: 0 0 3px 0 rgba($color-black, 0.22);
-    z-index: 1000;
-    //left: -200px;
+    z-index: 99;
 
     @media #{$small} {
         display: none;
     }
     .nav {
         display: table;
-        width: 100%;
+        position: relative;
+        width: 100%; 
+        background: $color-white;
+        box-shadow: 0 0 3px 0 rgba($color-black, 0.22);
+        z-index: 1000;
     }
     .menu-trigger-container,
     .brand-container {
@@ -186,44 +191,44 @@
     }
     .brand-container {
         width: 60%;
+        padding-right: 20%;
         text-align: center;
     }
     .menu-trigger {
         position: relative;
         width: $menu-trigger__width;
         height: $menu-trigger__height;
-        
         padding: 10px 15px;
-        z-index: 2;
+        z-index: 999;
     }
     .brand-small {
         text-align: center;
     }
-    .main-menu {
-        list-style: none;
-        position: fixed;
-        margin: 0;
-        padding: 0;
-        width: 200px;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-color: $color-black;
+}
+.left-menu {
 
-        li {
-        
-            a {
-              display: block;
-              padding:12px 0 12px 15px;
-              width: 185px;
-            }
+    list-style: none;
+    position: fixed;
+    margin: 0;
+    width: $mobile-menu-width;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $color-white;
+    left: -$mobile-menu-width;
+
+    li {
+    
+        a {
+          display: block;
+          padding:10px 20px;
         }
     }
 }
 /* Push body and nav */
 .push-right {
-  left:200px;
+  left: $mobile-menu-width;
 }
-.openLeft {
+.open-left {
   left: 0;
 }

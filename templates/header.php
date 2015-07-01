@@ -25,11 +25,10 @@
       <div class="brand-container">
          <a href="" class="brand-small">logo</a>
       </div>
-     
-      <?php
+    </nav>
+     <?php
       if (has_nav_menu('primary_navigation')) :
-        wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'main-menu']);
+        wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'left-menu']);
       endif;
       ?>
-    </nav>
 </header>
