@@ -52,9 +52,10 @@
 
 
 
-                    <i class="glyphicon glyphicon-play"></i>
+                    
                     <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                    <?php get_template_part('templates/entry-meta'); ?>
+                    <?php get_template_part('templates/entry-time'); ?>
+                    <span class="is-circle"><i class="glyphicon glyphicon-play"></i></span>
                   </div>
                 </div>
               </div>
@@ -80,7 +81,8 @@
                   <?php the_post_thumbnail('featured-small'); ?>
                   <div class="featured--overlay__inner">
                     <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                    <?php get_template_part('templates/entry-meta'); ?>
+                    <?php get_template_part('templates/entry-time'); ?>
+                    <a href="<?php the_permalink(); ?>" class="btn btn-default">Read more</a>
                   </div>
                 </div>
               </div>
