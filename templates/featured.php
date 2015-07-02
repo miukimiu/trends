@@ -55,7 +55,7 @@
                     
                     <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                     <?php get_template_part('templates/entry-time'); ?>
-                    <span class="is-circle"><i class="glyphicon glyphicon-play"></i></span>
+                    <span class="is-btn-circle"><i class="glyphicon glyphicon-play"></i></span>
                   </div>
                 </div>
               </div>

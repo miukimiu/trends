@@ -85,3 +85,17 @@ p {
         color: $color-white;
     }
 }
+.is-btn-circle {
+    $button-height: 40px; 
+
+    background: $color-primary;
+    color: $color-white;
+    width: $button-height;
+    height: $button-height;
+    display: inline-block;
+    border-radius: 50%;
+
+    i {
+        line-height: $button-height;
+    }
+}
