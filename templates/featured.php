@@ -18,7 +18,7 @@
             <header>
               <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
               <?php get_template_part('templates/entry-time'); ?>
-              <a href="<?php the_permalink(); ?>" class="btn btn-default">Read more</a>
+              <a href="<?php the_permalink(); ?>" class="btn btn-flat">Read more</a>
             </header>
           </article>
 
@@ -82,7 +82,7 @@
                   <div class="featured--overlay__inner">
                     <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                     <?php get_template_part('templates/entry-time'); ?>
-                    <a href="<?php the_permalink(); ?>" class="btn btn-default">Read more</a>
+                    <a href="<?php the_permalink(); ?>" class="btn btn-flat">Read more</a>
                   </div>
                 </div>
               </div>
