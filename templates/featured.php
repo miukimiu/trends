@@ -18,7 +18,7 @@
             <header>
               <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
               <?php get_template_part('templates/entry-time'); ?>
-              <a href="<?php the_permalink(); ?>" class="btn-small">Read more</a>
+              <a href="<?php the_permalink(); ?>" class="btn btn-default">Read more</a>
             </header>
           </article>
 
@@ -44,11 +44,19 @@
             <?php while ( $query->have_posts() ) : $query->the_post(); ?> 
 
               <div class="featured__item--video col-sm-5">
-                <?php the_post_thumbnail('featured-small'); ?>
+               
 
-                  <div></div>
+                <div class="featured--overlay">
+                  <?php the_post_thumbnail('featured-small'); ?>
+                  <div class="featured--overlay__inner">
+
+
+
+                    <i class="glyphicon glyphicon-play"></i>
                     <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                     <?php get_template_part('templates/entry-meta'); ?>
+                  </div>
+                </div>
               </div>
             
             <?php endwhile; wp_reset_postdata(); ?>
@@ -67,13 +75,14 @@
             <?php while ( $query->have_posts() ) : $query->the_post(); ?> 
 
               <div class="featured__item--portfolio col-sm-5">
-                <?php the_post_thumbnail('featured-small'); ?>
-                <article>
-                  <header>
+                
+                <div class="featured--overlay">
+                  <?php the_post_thumbnail('featured-small'); ?>
+                  <div class="featured--overlay__inner">
                     <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                     <?php get_template_part('templates/entry-meta'); ?>
-                  </header>
-                </article>
+                  </div>
+                </div>
               </div>
             
             <?php endwhile; wp_reset_postdata(); ?>
