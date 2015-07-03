@@ -91,7 +91,7 @@
 
                       <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                       <?php get_template_part('templates/entry-time'); ?>
-                      <a href="<?php the_permalink(); ?>" class="btn btn-flat">Read more</a>
+                      <a href="<?php the_permalink(); ?>" class="btn btn-flat">See Portfolio</a>
                       </div>
                     </div>
                   </div>
