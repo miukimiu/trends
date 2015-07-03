@@ -1,6 +1,6 @@
 .post {
     padding-bottom: $gutter;
-    
+
     h2,
     time {
         padding-bottom: $gutter-sm;
@@ -12,6 +12,6 @@
         display: block;
     }
     .entry-thubmbnail {
-        padding-bottom: $gutter;
+        padding-bottom: $gutter-md;
     }
 }
