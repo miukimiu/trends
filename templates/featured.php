@@ -1,20 +1,20 @@
-<section class="featured">
+<section class="featured clearfix">
     <div class="featured__item col-sm-7">
       <?php
         $counter = 1;
         $max = 1;
         // The Loop
-        while ( have_posts() ) : the_post();  
+        while ( have_posts() ) : the_post();
 
         //queremos apenas um artigo de destaque. Logo limitamos o loop para apenas o último artigo.
         if ($counter == $max) {
 
           ?>
-        
-       
+
+
           <?php the_post_thumbnail('featured'); ?>
 
-          <article>
+          <article class="featured__item__info">
             <header>
               <div class="info">
 
@@ -25,8 +25,8 @@
             </header>
           </article>
 
-    
-        <?php   
+
+        <?php
         }
 
         $counter++;
@@ -34,20 +34,20 @@
 
         // Reset Query
         wp_reset_query();
-      ?>   
+      ?>
     </div>
 
          <?php
-          if ( get_query_var('paged') ) $paged = get_query_var('paged');  
+          if ( get_query_var('paged') ) $paged = get_query_var('paged');
           if ( get_query_var('page') ) $paged = get_query_var('page');
-           
+
           $query = new WP_Query( array( 'post_type' => 'videos', 'paged' => $paged, 'showposts' => 1 ) );
-           
+
           if ( $query->have_posts() ) : ?>
-            <?php while ( $query->have_posts() ) : $query->the_post(); ?> 
+            <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
               <div class="featured__item--video col-sm-5">
-               
+
 
                 <div class="featured--overlay">
                   <?php the_post_thumbnail('featured-small'); ?>
@@ -64,7 +64,7 @@
                   </div>
                 </div>
               </div>
-            
+
             <?php endwhile; wp_reset_postdata(); ?>
             <!-- show pagination here -->
           <?php else : ?>
@@ -72,16 +72,16 @@
           <?php endif; ?>
 
         <?php
-          if ( get_query_var('paged') ) $paged = get_query_var('paged');  
+          if ( get_query_var('paged') ) $paged = get_query_var('paged');
           if ( get_query_var('page') ) $paged = get_query_var('page');
-           
+
           $query = new WP_Query( array( 'post_type' => 'portfolio', 'paged' => $paged, 'showposts' => 1 ) );
-           
+
           if ( $query->have_posts() ) : ?>
-            <?php while ( $query->have_posts() ) : $query->the_post(); ?> 
+            <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
               <div class="featured__item--portfolio col-sm-5">
-                
+
                 <div class="featured--overlay">
                   <?php the_post_thumbnail('featured-small'); ?>
                   <div class="featured--overlay__inner">
@@ -97,12 +97,11 @@
                   </div>
                 </div>
               </div>
-            
+
             <?php endwhile; wp_reset_postdata(); ?>
             <!-- show pagination here -->
           <?php else : ?>
             <!-- show 404 error here -->
           <?php endif; ?>
-    
+
 </section>
-        
