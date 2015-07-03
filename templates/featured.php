@@ -16,9 +16,12 @@
 
           <article>
             <header>
-              <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-              <?php get_template_part('templates/entry-time'); ?>
-              <a href="<?php the_permalink(); ?>" class="btn btn-flat">Read more</a>
+              <div class="info">
+
+                <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                <?php get_template_part('templates/entry-time'); ?>
+                <a href="<?php the_permalink(); ?>" class="btn btn-flat">Read more</a>
+              </div>
             </header>
           </article>
 
@@ -50,12 +53,14 @@
                   <?php the_post_thumbnail('featured-small'); ?>
                   <div class="featured--overlay__inner">
 
+                    <div class="info-outer">
+                      <div class="info">
 
-
-                    
-                    <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                    <?php get_template_part('templates/entry-time'); ?>
-                    <span class="is-btn-circle"><i class="glyphicon glyphicon-play"></i></span>
+                      <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                      <?php get_template_part('templates/entry-time'); ?>
+                      <span class="is-btn-circle"><i class="glyphicon glyphicon-play"></i></span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -80,9 +85,15 @@
                 <div class="featured--overlay">
                   <?php the_post_thumbnail('featured-small'); ?>
                   <div class="featured--overlay__inner">
-                    <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                    <?php get_template_part('templates/entry-time'); ?>
-                    <a href="<?php the_permalink(); ?>" class="btn btn-flat">Read more</a>
+
+                    <div class="info-outer">
+                      <div class="info">
+
+                      <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                      <?php get_template_part('templates/entry-time'); ?>
+                      <a href="<?php the_permalink(); ?>" class="btn btn-flat">Read more</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
