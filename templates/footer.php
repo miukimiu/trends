@@ -3,7 +3,7 @@
     <?php dynamic_sidebar('sidebar-footer'); ?>
 
     <div>
-        © COPYRIGHT 2015 CAMILACOELHO.COM - TODOS OS DIREITOS RESERVADOS.   | DESIGN E PROGRAMAÇÃO EVELYNREGLY.COM
+        © COPYRIGHT 2015 HELENACESAR.COM - TODOS OS DIREITOS RESERVADOS
     </div>
   </div>
 </footer>
