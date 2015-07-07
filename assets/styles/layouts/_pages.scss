@@ -126,3 +126,8 @@
     display: table-cell;
     vertical-align: middle;
 }
+.size-full {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
