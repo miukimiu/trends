@@ -1,5 +1,17 @@
 .post {
-    header {
-        padding-top: $gutter;
+    padding-bottom: $gutter;
+
+    h2,
+    time {
+        padding-bottom: $gutter-sm;
+    }
+    h2 {
+        margin: 0;
+    }
+    time {
+        display: block;
+    }
+    .entry-thubmbnail {
+        padding-bottom: $gutter-md;
     }
 }

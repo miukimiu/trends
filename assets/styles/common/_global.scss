@@ -28,12 +28,12 @@ body {
     }
     ul {
         padding: 0;
-        margin: 0; 
+        margin: 0;
         list-style: none;
     }
 }
 
-// typography 
+// typography
 h1,
 h2,
 h3 {
@@ -62,12 +62,12 @@ p {
     height: 32px;
 }
 // For IE
- 
+
 .btn-inverse:active,
 .btn-inverse.active {
   background-color: #080808 \9;
 }
- 
+
 // Add 'btn-flat' to your buttons
 .btn-flat {
     filter:progid:DXImageTransform.Microsoft.Gradient(enabled='false');
@@ -86,7 +86,7 @@ p {
     }
 }
 .is-btn-circle {
-    $button-height: 40px; 
+    $button-height: 40px;
 
     background: $color-primary;
     color: $color-white;

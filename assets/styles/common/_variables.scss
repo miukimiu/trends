@@ -5,8 +5,8 @@ $icon-font-path:        "../fonts/";
 $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
-/* ---------------------------------------- */ 
-/* Variables */ 
+/* ---------------------------------------- */
+/* Variables */
 /* ---------------------------------------- */
 $color-bg: #fff;
 $color-font-header: #000;
@@ -34,3 +34,5 @@ $font-light: 300;
 
 $gutter: 30px;
 $gutter-md: 15px;
+$gutter-sm: $gutter / 3;
+$gutter-lg: $gutter * 2;
