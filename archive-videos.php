@@ -1,20 +1,24 @@
-<div class="row">
-    <?php while (have_posts()) : the_post(); ?>
 
-        <article class="portfolio-item col-sm-4">
-            <header>
+<?php while (have_posts()) : the_post(); ?>
+
+    <div class="video-item">
+
+        <div class="video--overlay">
+          <?php the_post_thumbnail('featured-small'); ?>
+          <div class="video--overlay__inner">
+
+            <div class="info-outer">
+              <div class="info">
+
                 <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-            </header>
-
-            <div class="entry-thubmbnail">  
-                 <?php the_post_thumbnail('featured'); ?>
+              
+                <?php get_template_part('templates/entry-time'); ?>
+              
+                <span class="is-btn-circle"><i class="glyphicon glyphicon-play"></i></span>
+              </div>
             </div>
-            
-            <div class="entry-summary">
-                <?php the_excerpt(); ?>
-            </div>
-        </article>
+          </div>
+        </div>
+    </div>
 
-    <?php endwhile; ?>
-</div>
-
+<?php endwhile; ?>
