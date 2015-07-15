@@ -1,17 +1,22 @@
 <footer class="footer" role="contentinfo">
-    <div class="container">
-        <?php dynamic_sidebar('sidebar-footer'); ?>
 
-        <div class="row" id="copyright">
+    <div class="footer__wigdets">
+        <div class="container">
+            <?php dynamic_sidebar('sidebar-footer'); ?>
+        </div>
+    </div>
+
+    <div class="footer__bottom">
+        <div class="container">
                     
-            <div class="col-xs-5">
+            <div class="col-xs-5 footer__copyright">
                 
                 <p>© 2015 Helena Cesar.  </p>
                                     
             </div><!--/span_5-->
             
-            <div class="col-xs-7">
-                <ul id="social">
+            <div class="col-xs-7 footer__social">
+                <ul>
                     <li><a target="_blank" href="https://twitter.com/Helenacesarmua"><i class="ion-social-twitter"></i> </a></li>
                     <li><a target="_blank" href="https://www.facebook.com/helenacesarmakeup"><i class="ion-social-facebook"></i> </a></li>
                     <li><a target="_blank" href="http://uk.pinterest.com/helenacesar/"><i class="ion-social-pinterest"></i> </a></li>

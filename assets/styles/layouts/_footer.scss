@@ -1,6 +1,36 @@
 .footer {
     
-} 
+}
+
+.null-instagram-feed  {
+    text-align: center;
+    overflow: hidden;
+    line-height: 2em;
+}
+.null-instagram-feed  h3 {
+  display: inline-block;
+  position: relative;
+  color: $color-text;
+}
+.null-instagram-feed h3:before,
+.null-instagram-feed h3:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-top: 1px solid;
+  top: 50%;
+  width: 100%;
+}
+.null-instagram-feed h3:before {
+  right: 100%;
+  margin-right: 15px;
+}
+.null-instagram-feed h3:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+
 .instagram-pics {
     @include make-row();
 
@@ -11,5 +41,26 @@
         img {
             @extend .img-thumbnail;
         }
+    }
+}
+.footer__wigdets {
+}
+.footer__bottom {
+    background: $color-background;
+    padding: $gutter-md 0;
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}
+.footer__social {
+    text-align: right;
+
+    ul, li {
+        display: inline-block;
+    }
+    li  {
+        padding-left: 4px;
     }
 }
