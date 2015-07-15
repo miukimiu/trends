@@ -54,6 +54,42 @@
                 return false;
         });
 
+        /* Serach input on main menu */
+
+        /*  Search header */
+        var $search = $( '.menu-search' ),
+            $searchinput = $search.find('input.menu-search-input'),
+            $body = $('html,body'),
+            openSearch = function() {
+              $search.data('open',true).addClass('menu-search-open');
+              $searchinput.focus();
+              return false;
+            },
+            closeSearch = function() {
+              $search.data('open',false).removeClass('menu-search-open');
+            };
+
+          $searchinput.on('click',function(e) { e.stopPropagation(); $search.data('open',true); });
+
+          $search.on('click',function(e) {
+            e.stopPropagation();
+            if( !$search.data('open') ) {
+
+              openSearch();
+
+              $body.off( 'click' ).on( 'click', function(e) {
+                closeSearch();
+              } );
+
+            }
+            else {
+              if( $searchinput.val() === '' ) {
+                closeSearch();
+                return false;
+              }
+            }
+          });
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
