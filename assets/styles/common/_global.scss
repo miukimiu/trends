@@ -92,7 +92,7 @@ p {
 .is-btn-circle {
     $button-height: 40px;
 
-    background: $color-primary;
+    background: rgba($color-primary, 0.8);
     color: $color-white;
     width: $button-height;
     height: $button-height;
@@ -102,4 +102,47 @@ p {
     i {
         line-height: $button-height;
     }
+    .ion-camera {
+        font-size: 24px;
+    }
+}
+
+.item {
+    padding-bottom: $gutter;
+}
+.item--overlay {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+
+}
+.item--overlay__inner {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba($color-black, 0.4);
+    padding: 15px;
+    text-align: center;
+
+    time {
+        padding: 10px 0;
+        display: block;
+        color: $color-white;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin: 0;
+
+        a {
+            color: $color-white;
+        }
+    }
+}
+.item header {
+    padding-bottom: 15px;
 }
