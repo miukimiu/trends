@@ -1,11 +1,11 @@
 
 <?php while (have_posts()) : the_post(); ?>
 
-    <div class="video-item">
+    <div class="item">
 
-        <div class="video--overlay">
+        <div class="item--overlay">
           <?php the_post_thumbnail('featured-small'); ?>
-          <div class="video--overlay__inner">
+          <div class="item--overlay__inner">
 
             <div class="info-outer">
               <div class="info">
