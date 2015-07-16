@@ -2,21 +2,19 @@
     <a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
 
 
-    <nav role="navigation" class="nav">
+    <div class="container">
+      <nav role="navigation" class="nav">
 
-      <div class="container">
-        <a class="menu-trigger">
-          <span class="glyphicon glyphicon-menu-hamburger"></span>
-        </a>
-        <a href="" class="brand-small">logo</a>
-        <?php
-        if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu(['theme_location' => 'primary_navigation', 'container' => '', 'menu_class' => 'main-menu']);
-        endif;
-        ?>
-        <?php get_template_part('templates/menu', 'search'); ?>
-        </div>
-    </nav>
+            <?php
+            if (has_nav_menu('primary_navigation')) :
+              wp_nav_menu(['theme_location' => 'primary_navigation', 'container' => '', 'menu_class' => 'main-menu']);
+            endif;
+            ?>
+            
+            <?php get_template_part('templates/menu', 'search'); ?>  
+          
+      </nav>
+    </div>
 
 </header>
 
