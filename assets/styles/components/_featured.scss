@@ -4,6 +4,16 @@
 /* ---------------------------------------- */
 .featured {
     text-align: center;
+    padding-top: 40px;
+
+
+    @media #{$small} {
+        padding-top: 0;
+    }
+
+    .is-sticky & {
+        padding-top: 40px;
+    }
 
     img {
         @extend .img-responsive;
@@ -41,7 +51,7 @@
         h2 {
             margin: 0;
             padding: 0;
-            font-size: 25px;
+            font-size: 20px;
 
             a {
                 color: $color-white;
@@ -59,15 +69,19 @@
     }
 }
 .featured__item {
+    margin-bottom: $gutter-md;
 
     @media #{$small} {
        padding-right: 1.3513513515%;
+       margin-bottom: 0;
     }
 }
 .featured__item--video {
+    margin-bottom: $gutter-md;
 
     @media #{$small} {
-       padding-bottom: 1.3513513515%;
+        padding-bottom: 1.3513513515%;
+        margin-bottom: 0;
     }
 }
 .featured__item--portfolio {

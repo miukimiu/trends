@@ -33,7 +33,6 @@ $mobile-menu-width: 300px;
         font-weight: 100;
         position:relative;
         display: inline-block;
-        top: 32px;
         width: 455px;
         height: 150px; 
         background: url(../images/logo.jpg) no-repeat left top;
@@ -68,6 +67,7 @@ $mobile-menu-width: 300px;
     position: relative;
     display: none;
     top: -10px;
+    float: left;
 
      @media #{$small} {
         display: inline-block;
@@ -134,6 +134,20 @@ $mobile-menu-width: 300px;
         }
     }
 }// main header
+.header__icons {
+    display: none;
+    text-align: right;
+
+    @media #{$small} {
+        display: block;
+    }
+
+    ul {
+        a {
+            line-height: 34px;
+        }
+    }
+}
 
 /* ---------------------------------------- */ 
 /* Search */
@@ -147,6 +161,7 @@ $search-height: 34px;
     height: $search-height;
     top: 0px;
     z-index: 100000;
+    float: right;
 }
 .menu-search__inner {
     position: absolute;
@@ -175,7 +190,7 @@ input[type="submit"].menu-search-submit  {
 }
 .ion-search {
     font-size: 20px;
-  z-index: 90;
+    z-index: 90;
 }
 .menu-search.menu-search-open .ion-search{
     background: darken($color-primary, 5%);
@@ -220,7 +235,7 @@ input[type="text"].menu-search-input {
 /* ---------------------------------------- */
 
 .is-sticky {
-    padding-top: 200px;
+    padding-top: 30px;
 
     @media #{$small} {
         padding-top: 100px;
@@ -236,6 +251,9 @@ input[type="text"].menu-search-input {
         .nav {
             top: 10px;
             transition: all .3s ease;
+        }
+        .header__icons {
+            display: none;
         }
     }
 }
@@ -275,7 +293,6 @@ input[type="text"].menu-search-input {
     }
     .brand-container {
         width: 60%;
-        padding-right: 20%;
         text-align: center;
     }
     .menu-trigger {
@@ -288,9 +305,11 @@ input[type="text"].menu-search-input {
     .brand-small {
         text-align: center;
     }
+    .menu-search {
+        top: 8px;
+    }
 }
 .left-menu {
-
     list-style: none;
     position: fixed;
     margin: 0;

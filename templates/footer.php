@@ -16,7 +16,7 @@
             </div><!--/span_5-->
             
             <div class="col-xs-7 footer__social">
-                <ul>
+                <ul class="icons-inline">
                     <li><a target="_blank" href="https://twitter.com/Helenacesarmua"><i class="ion-social-twitter"></i> </a></li>
                     <li><a target="_blank" href="https://www.facebook.com/helenacesarmakeup"><i class="ion-social-facebook"></i> </a></li>
                     <li><a target="_blank" href="http://uk.pinterest.com/helenacesar/"><i class="ion-social-pinterest"></i> </a></li>

@@ -56,8 +56,7 @@
                     <div class="info-outer">
                       <div class="info">
 
-                      <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                      <?php get_template_part('templates/entry-time'); ?>
+                      <h2 class="entry-title"><a href="<?php echo types_render_field("youtube-link", array("output"=>"raw")); ?>" target="blank"><?php the_title(); ?></a></h2>
                       <span class="is-btn-circle"><i class="glyphicon glyphicon-play"></i></span>
                       </div>
                     </div>

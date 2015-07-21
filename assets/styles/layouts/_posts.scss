@@ -1,5 +1,7 @@
 .post {
     padding-bottom: $gutter;
+    margin-bottom: $gutter;
+    border-bottom: 1px solid $color-background;
 
     h2,
     time {
