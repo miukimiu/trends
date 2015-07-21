@@ -12,7 +12,7 @@
           <?php get_template_part('templates/menu', 'search'); ?>
       </nav>
 
-      <a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+      <a class="brand" href="<?= esc_url(home_url('')); ?>"><img src="<?php echo get_template_directory_uri('images/logo.png'); ?>"></a>
     
       <nav role="navigation" class="nav">
 

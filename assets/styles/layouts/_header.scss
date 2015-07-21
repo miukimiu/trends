@@ -35,9 +35,7 @@ $mobile-menu-width: 300px;
         display: inline-block;
         width: 455px;
         height: 150px; 
-        background: url(../images/logo.jpg) no-repeat left top;
         transition: all .3s ease;
-        text-indent : -9999px;
 
         @media #{$small} {
             display: inline-block;
