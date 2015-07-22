@@ -9,10 +9,9 @@
               <li><a target="_blank" href="http://instagram.com/helenacesarmakeup/"><i class="ion-social-instagram"></i></a></li>
           </ul>
           
-          <?php get_template_part('templates/menu', 'search'); ?>
       </nav>
 
-      <a class="brand" href="<?= esc_url(home_url('')); ?>"><img src="<?php echo get_template_directory_uri('images/logo.png'); ?>"></a>
+      <a class="brand" href="<?= esc_url(home_url('')); ?>"><img src="<?php echo get_template_directory_uri('images/logo.png'); ?>/dist/images/logo.png"></a>
     
       <nav role="navigation" class="nav">
 
@@ -21,6 +20,8 @@
               wp_nav_menu(['theme_location' => 'primary_navigation', 'container' => '', 'menu_class' => 'main-menu']);
             endif;
             ?>
+
+            <?php get_template_part('templates/menu', 'search'); ?>
           
       </nav>
     </div>
@@ -37,7 +38,9 @@
       </div>
       
       <div class="brand-container">
-         <a href="" class="brand-small">logo</a>
+         <a href="" class="brand-small">
+            <img src="<?php echo get_template_directory_uri('images/logo.png'); ?>/dist/images/logo-small.png">
+         </a>
       </div>
 
       <?php get_template_part('templates/menu', 'search'); ?>
