@@ -8,7 +8,8 @@
 
 
     @media #{$small} {
-        padding-top: 0;
+        padding-top: $gutter;;
+        padding-bottom: $gutter;
     }
 
     .is-sticky & {
