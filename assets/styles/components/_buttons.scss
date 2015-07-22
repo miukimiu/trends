@@ -1,0 +1,3 @@
+.btn-primary {
+  @include button-variant($color-white, $color-primary, $color-primary); // font, bg, border
+}

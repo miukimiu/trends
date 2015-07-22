@@ -73,7 +73,8 @@ p {
 }
 
 // Add 'btn-flat' to your buttons
-.btn-flat {
+.btn-flat,
+.comment-form input[type=submit] {
     filter:progid:DXImageTransform.Microsoft.Gradient(enabled='false');
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -81,7 +82,8 @@ p {
     background-image:none;
     border:0;
 }
-.btn {
+.btn,
+.comment-form input[type=submit]{
     background: $color-primary;
     color: $color-white;
 
