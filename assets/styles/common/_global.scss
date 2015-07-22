@@ -131,6 +131,12 @@ p {
 }
 .item {
     padding-bottom: $gutter;
+
+    & a:hover {
+        .item--overlay__inner {
+            background: rgba($color-black, 0.6);
+        }
+    }
 }
 .item--overlay {
     height: 100%;
@@ -138,7 +144,6 @@ p {
     position: relative;
     top: 0;
     left: 0;
-
 }
 .item--overlay__inner {
     height: 100%;
@@ -159,10 +164,8 @@ p {
     h2 {
         font-size: 20px;
         margin: 0;
+        color: $color-white;
 
-        a {
-            color: $color-white;
-        }
     }
 }
 .item header {

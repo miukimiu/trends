@@ -30,6 +30,7 @@ function setup() {
   add_image_size( 'single', 750, 9999);
   add_image_size( 'featured', 1268, 788, true );
   add_image_size( 'featured-small', 888, 364, true );
+  add_image_size( 'portfolio', 780, 485, true );
 
   // Add post formats
   // http://codex.wordpress.org/Post_Formats

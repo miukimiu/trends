@@ -15,14 +15,16 @@
           <?php the_post_thumbnail('featured'); ?>
 
           <article class="featured__item__info">
-            <header>
-              <div class="info">
+            <a href="<?php the_permalink(); ?>">
+              <header>
+                <div class="info">
 
-                <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                <?php get_template_part('templates/entry-time'); ?>
-                <a href="<?php the_permalink(); ?>" class="btn btn-flat">Read more</a>
-              </div>
-            </header>
+                  <h2 class="entry-title"><?php the_title(); ?></h2>
+                  <?php get_template_part('templates/entry-time'); ?>
+                  <span class="btn btn-flat">Read more</span>
+                </div>
+              </header>
+            </a>
           </article>
 
 
@@ -47,21 +49,22 @@
             <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
               <div class="featured__item--video col-sm-5">
+                <a href="<?php echo types_render_field("youtube-link", array("output"=>"raw")); ?>" target="blank">
 
+                  <div class="featured--overlay">
+                    <?php the_post_thumbnail('featured-small'); ?>
+                    <div class="featured--overlay__inner">
 
-                <div class="featured--overlay">
-                  <?php the_post_thumbnail('featured-small'); ?>
-                  <div class="featured--overlay__inner">
+                      <div class="info-outer">
+                        <div class="info">
 
-                    <div class="info-outer">
-                      <div class="info">
-
-                      <h2 class="entry-title"><a href="<?php echo types_render_field("youtube-link", array("output"=>"raw")); ?>" target="blank"><?php the_title(); ?></a></h2>
-                      <span class="is-btn-circle"><i class="glyphicon glyphicon-play"></i></span>
+                        <h2 class="entry-title"><?php the_title(); ?></h2>
+                        <span class="is-btn-circle"><i class="glyphicon glyphicon-play"></i></span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
 
             <?php endwhile; wp_reset_postdata(); ?>
@@ -80,21 +83,22 @@
             <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
               <div class="featured__item--portfolio col-sm-5">
+                <a href="<?php the_permalink(); ?>">
+                  <div class="featured--overlay">
+                    <?php the_post_thumbnail('featured-small'); ?>
+                    <div class="featured--overlay__inner">
 
-                <div class="featured--overlay">
-                  <?php the_post_thumbnail('featured-small'); ?>
-                  <div class="featured--overlay__inner">
+                      <div class="info-outer">
+                        <div class="info">
 
-                    <div class="info-outer">
-                      <div class="info">
-
-                      <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                      <?php get_template_part('templates/entry-time'); ?>
-                      <a href="<?php the_permalink(); ?>" class="btn btn-flat">See Portfolio</a>
+                        <h2 class="entry-title"><?php the_title(); ?></h2>
+                        <?php get_template_part('templates/entry-time'); ?>
+                        <span class="btn btn-flat">See Portfolio</span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
 
             <?php endwhile; wp_reset_postdata(); ?>
