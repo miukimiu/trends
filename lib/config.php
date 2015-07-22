@@ -53,6 +53,7 @@ function display_sidebar() {
        */
       [
         'is_404',
+        array('is_singular', array('projects')),
         ['is_page_template', 'template-custom.php'],
         ['is_post_type_archive', 'portfolio']
       ]
