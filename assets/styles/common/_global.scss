@@ -113,6 +113,7 @@ p {
 /* ---------------------------------------- */
 .content {
     padding-top: $gutter;
+    padding-bottom: $gutter + 10px;
 }
 .info-outer {
     display: table;
