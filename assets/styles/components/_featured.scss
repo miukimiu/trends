@@ -4,10 +4,11 @@
 /* ---------------------------------------- */
 .featured {
     text-align: center;
-    padding-top: 40px;
+    padding-top: 52px + $gutter; //menu height + space
 
 
     @media #{$small} {
+        display: none;
         padding-top: $gutter;;
         padding-bottom: $gutter;
     }
