@@ -1,14 +1,7 @@
 <header class="desktop-header" role="banner">
     <div class="container">
       <nav class="header__icons">
-          <ul class="icons-inline">
-              <li><a target="_blank" href="https://twitter.com/Helenacesarmua"><i class="ion-social-twitter"></i> </a></li>
-              <li><a target="_blank" href="https://www.facebook.com/helenacesarmakeupartist"><i class="ion-social-facebook"></i> </a></li>
-              <li><a target="_blank" href="http://uk.pinterest.com/helenacesar/"><i class="ion-social-pinterest"></i> </a></li>
-              <li><a target="_blank" href="https://www.youtube.com/channel/UCKnq1PELZ46txIm5U0o3AIQ"><i class="ion-social-youtube"></i> </a></li>
-              <li><a target="_blank" href="http://instagram.com/helenacesarmakeup/"><i class="ion-social-instagram"></i></a></li>
-          </ul>
-          
+          <?php get_template_part('templates/icons', 'inline'); ?>
       </nav>
 
       <a class="brand" href="<?= esc_url(home_url('')); ?>"><img src="<?php echo get_template_directory_uri('images/logo.png'); ?>/dist/images/logo.png"></a>
