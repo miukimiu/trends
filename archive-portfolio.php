@@ -13,8 +13,6 @@
 
                     <h2 class="entry-title"><?php the_title(); ?></h2>
                   
-                    <?php get_template_part('templates/entry-time'); ?>
-                  
                     <span class="is-btn-circle"><i class="ion-camera"></i></span>
                   </div>
                 </div>
